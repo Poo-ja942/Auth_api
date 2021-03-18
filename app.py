@@ -57,7 +57,7 @@ def users():
     return jsonify({'users': output}) 
 
 
-@app.route('/login', methods =['POST']) 
+@app.route('/user/login', methods =['POST']) 
 def login(): 
     email = request.json['email']
     password = request.json['password'] 
@@ -80,7 +80,7 @@ def login():
     return make_response("Wrong Password !!" )  
    
 # signup route 
-@app.route('/signup', methods =['POST']) 
+@app.route('/user/signup', methods =['POST']) 
 def signup(): 
     name = request.json['name']
     email = request.json['email']
